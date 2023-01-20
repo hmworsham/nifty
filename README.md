@@ -1,2 +1,2 @@
 # Nifty
-A few little R functions that are handy for odds and ends or often reused.
+A few little R functions for odds and ends or for tasks I end up doing a lot.
