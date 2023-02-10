@@ -39,7 +39,9 @@ Illustration of icolors
 Creates plots of the colors in \code{\link[=icolors]{icolors()}}
 }
 \examples{
+\dontrun{
 icolors.plot()
+}
 }
 \references{
 \url{https://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors}

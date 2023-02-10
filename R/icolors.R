@@ -1,47 +1,19 @@
 #' icolors
 #' Vectors of colors for figures
-#'
-#' Creates different vectors of related colors that may be useful for figures.
-#'
+#' @description Creates different vectors of related colors that may be useful for figures.
 #' @param set Character string indicating a set of colors.
 #' @return Vector of character strings representing the chosen set of colors, in RGB.
-#' @export
 #' @importFrom grDevices rgb2hsv
 #' @importFrom stats hclust dist
 #' @importFrom graphics par rect text
 #' @seealso [plot_crayons()]
-#' @examples
-#' par(mar=c(0.6,5.1,0.6,0.6))
-#' plot(0, 0, type='n', xlab='', ylab='', xlim=c(0, 9), ylim=c(8.5, 0), yaxs='i',
-#'      xaxt='n', yaxt='n', xaxs='i')
-#' axis(side=2, at=1:8, c('general', 'general2', 'bg', 'bgpng', 'CC', 'f2', 'sex', 'main'), las=1)
-#'
-#' gen <- icolors('general')
-#' points(seq(along=gen), rep(1,length(gen)), pch=21, bg=gen, cex=4)
-#' text(seq(along=gen), rep(c(0.55, 0.7), length(gen))[seq(along=gen)], names(gen))
-#'
-#' gen2 <- icolors('general2')
-#' points(seq(along=gen2), rep(2,length(gen2)), pch=21, bg=gen2, cex=4)
-#' text(seq(along=gen2), rep(1+c(0.55, 0.7), length(gen2))[seq(along=gen2)], names(gen2))
-#'
-#' points(1, 3, pch=21, bg=icolors('bg'), cex=4)
-#' points(1, 4, pch=21, bg=icolors('bgpng'), cex=4)
-#'
-#' CC <- icolors('CC')
-#' points(seq(along=CC), rep(5,length(CC)), pch=21, bg=CC, cex=4)
-#' text(seq(along=CC), rep(4+c(0.55, 0.7), length(CC))[seq(along=CC)], names(CC))
-#'
-#' f2 <- icolors('f2')
-#' points(seq(along=f2), rep(6,length(f2)), pch=21, bg=f2, cex=4)
-#' text(seq(along=f2), rep(5.7, length(f2)), names(f2))
-#'
-#' sex <- icolors('sex')
-#' points(seq(along=sex), rep(7,length(sex)), pch=21, bg=sex, cex=4)
-#' text(seq(along=sex), rep(6.7, length(sex)), names(sex))
-#'
-#' points(1, 8, pch=21, bg=icolors('main'), cex=4)
-
 #' @keywords utilities
+#' @examples
+#' \dontrun{
+#' points(1, 8, pch=21, bg=icolors('main'), cex=4)
+#' }
+#' @export
+
 icolors <-
   function(set = c(
     'general',
@@ -390,7 +362,9 @@ icolors <-
 #' @references <https://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors>
 #' @seealso [icolors()]
 #' @examples
+#' \dontrun{
 #' icolors.plot()
+#' }
 
 icolors.plot <-
   function(set = c(
@@ -504,15 +478,16 @@ icolors.plot <-
 #'
 #' @param color_names Optional vector of color names; can be partial matches.
 #' @param ... Additional optional color names
-#'
 #' @return Vector of named RGB colors
-#'
 #' @references <https://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors>
-#'
 #' @seealso [icolors.plot()], [icolors()]
 #' @export
 #' @keywords utilities
-
+#' @examples 
+#' \dontrun{
+#' icolors.lookup('red')
+#' }
+#' 
 icolors.lookup <-
   function(color_names = NULL, ...)
   {

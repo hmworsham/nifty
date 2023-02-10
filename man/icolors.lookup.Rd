@@ -19,6 +19,12 @@ Vector of named RGB colors
 icolors.lookup
 Vector of colors in colorsets
 }
+\examples{
+\dontrun{
+icolors.lookup('red')
+}
+
+}
 \references{
 \url{https://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors}
 }
